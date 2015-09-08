@@ -1,8 +1,5 @@
 package com.company;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * @author Dimitrijs Fedotovs <a href="http://www.bug.guru">www.bug.guru</a>
  * @version 1.0

@@ -15,13 +15,13 @@ public class SlaveWorker extends AbstractWorker {
         boolean logged = false;
         long nextPing = System.currentTimeMillis() + 30000;
 
-        while(isKeepRunning()) {
+        while (isKeepRunning()) {
             long value = getValue();
             if (nextPing < System.currentTimeMillis()) {
                 print("Still running " + value);
                 nextPing = System.currentTimeMillis() + 10000;
             }
-            if (value % 10 == 0) {
+            if (value % 10000 == 0) {
                 if (logged) {
                     continue;
                 }
