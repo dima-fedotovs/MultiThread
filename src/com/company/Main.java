@@ -10,5 +10,4 @@ public class Main {
         new Thread(new MasterWorker(state), "master").start();
     }
 
-
 }
