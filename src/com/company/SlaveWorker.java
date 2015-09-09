@@ -14,7 +14,7 @@ public class SlaveWorker implements Runnable {
 
     @Override
     public void run() {
-        long nextPing = System.currentTimeMillis() + 20000;
+        long nextPing = System.currentTimeMillis() + 40000;
 
         while (state.isKeepRunning()) {
             if (nextPing < System.currentTimeMillis()) {
