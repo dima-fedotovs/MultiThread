@@ -7,7 +7,6 @@ package com.company;
  */
 public class State {
     private boolean keepRunning = true;
-    private long value = 0;
 
     public boolean isKeepRunning() {
         return keepRunning;
@@ -15,13 +14,5 @@ public class State {
 
     public void setKeepRunning(boolean keepRunning) {
         this.keepRunning = keepRunning;
-    }
-
-    public long getValue() {
-        return value;
-    }
-
-    public void setValue(long value) {
-        this.value = value;
     }
 }

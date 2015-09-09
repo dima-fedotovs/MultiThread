@@ -5,22 +5,22 @@ package com.company;
  * @version 1.0
  * @since 1.0
  */
-public class MasterWorker extends AbstractWorker {
+public class MasterWorker implements Runnable {
+    private final State state;
+
     public MasterWorker(State state) {
-        super(state);
+        this.state = state;
     }
 
     @Override
     public void run() {
         for (int i = 0; i < 100000000; i++) {
-            long value = getValue() + 1;
-            setValue(value);
-            if (value % 10000000 == 0) {
-                print("value: " + value);
+            if (i % 10000000 == 0) {
+                Logger.log("progress: " + i);
             }
         }
-        print("FINISHED");
-        stopRunning();
+        Logger.log("FINISHED");
+        state.setKeepRunning(false);
     }
 
 }
